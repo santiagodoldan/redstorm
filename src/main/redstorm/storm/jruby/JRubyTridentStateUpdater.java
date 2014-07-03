@@ -1,6 +1,8 @@
 package redstorm.storm.jruby;
 
 import java.util.List;
+import java.util.Map;
+
 import org.jruby.Ruby;
 import org.jruby.runtime.Helpers;
 import org.jruby.runtime.builtin.IRubyObject;
@@ -9,8 +11,10 @@ import org.jruby.RubyModule;
 import org.jruby.exceptions.RaiseException;
 
 import storm.trident.operation.TridentCollector;
+import storm.trident.operation.TridentOperationContext;
 import storm.trident.state.BaseStateUpdater;
 import storm.trident.state.State;
+import storm.trident.state.StateUpdater;
 import storm.trident.tuple.TridentTuple;
 
 public class JRubyTridentStateUpdater extends BaseStateUpdater<State> {
